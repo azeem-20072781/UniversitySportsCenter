@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="added Java Docs for methods">
+    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="added missing docs. Added reports to print">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Review.java" afterDir="false" />
     </list>
@@ -81,7 +80,7 @@
       <workItem from="1650765281080" duration="5015000" />
       <workItem from="1650803341369" duration="846000" />
       <workItem from="1650814853914" duration="1445000" />
-      <workItem from="1650819039822" duration="2630000" />
+      <workItem from="1650819039822" duration="3410000" />
     </task>
     <task id="LOCAL-00001" summary="started project and added Main.java, LessonClass.java, Exercise.java, Student.java and Review.java">
       <created>1650598043244</created>
@@ -104,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650818721482</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="completed TODOs, added Review Lesson. added required setter methods and toString method">
+      <created>1650821816106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650821816106</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +132,8 @@
     <MESSAGE value="added TimeOfDay.java and reformatted code" />
     <MESSAGE value="added TimeOfDay.java and reformatted code. Extracted methods to take input for exercise and time of day" />
     <MESSAGE value="added Java Docs for methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Java Docs for methods" />
+    <MESSAGE value="completed TODOs, added Review Lesson. added required setter methods and toString method" />
+    <MESSAGE value="added missing docs. Added reports to print" />
+    <option name="LAST_COMMIT_MESSAGE" value="added missing docs. Added reports to print" />
   </component>
 </project>

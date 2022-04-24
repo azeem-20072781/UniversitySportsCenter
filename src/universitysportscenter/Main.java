@@ -21,7 +21,7 @@ public class Main {
 
         int choice;
         do {
-            System.out.println("Enter your choice: \n1:Schedule\n2:Check Timetable and Choose Lesson\n3:Show Students\n4:Review Your Lesson\n0:Exit");
+            System.out.println("Enter your choice: \n1:Schedule\n2:Check Timetable and Choose Lesson\n3:Show Students\n4:Review Your Lesson\n5:Print Reports\n0:Exit");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1 -> {
@@ -92,11 +92,25 @@ public class Main {
                     }
 
                 }
+                case 5 -> {
+                    //TODO print reports
+                    System.out.println("Choose Report To Print: 1:Report 1\n2:Report 2");
+                    int reportNumber = Integer.parseInt(scanner.nextLine());
+                   //a report containing the number of students per group exercise lesson on each day, along with the
+                    //average rating;
+                    if (reportNumber == 1) {
+                    }
+                    //a report containing the group exercise which has generated the highest income, counting all the
+                    //same exercise lessons together.
+                    else if (reportNumber == 2) {
+
+                    }
+                }
             }
             if (choice != 0) {
                 System.out.println("Do you want to perform another action(1/0)?");
                 choice = Integer.parseInt(scanner.nextLine());
-            }else System.out.println("Thank you for using this system");
+            } else System.out.println("Thank you for using this system");
         } while (choice == 1);
 
     }
@@ -104,7 +118,7 @@ public class Main {
     /**
      * it adds dummy data to application
      *
-     * @param lessonClassesList
+     * @param lessonClassesList  list containing data of all students
      */
     private static void addStudentsData(ArrayList<LessonClass> lessonClassesList) {
         for (int i = 0; i < 10; i++) {
@@ -140,8 +154,8 @@ public class Main {
     /**
      * it generates random numbers
      *
-     * @param max
-     * @return
+     * @param max  limit upto which the random number will be generated
+     * @return  a random number
      */
     private static int getRandomNumber(int max) {
         Random random = new Random();
@@ -153,8 +167,8 @@ public class Main {
     /**
      * it takes exercise from user whichever he wants to select
      *
-     * @param exerciseNumber
-     * @return Exercise
+     * @param exerciseNumber it is the exercise number selected by student
+     * @return Exercise as per the exercise number
      */
     private static Exercise getExercise(int exerciseNumber) {
         Exercise exercise = null;
@@ -170,8 +184,8 @@ public class Main {
     /**
      * it takes the time of day from user for lesson
      *
-     * @param scanner
-     * @return TimeOfDay
+     * @param scanner object of student to take input from user
+     * @return TimeOfDay it is the time of the day as selected by student
      */
     private static TimeOfDay getTimeOfDay(Scanner scanner) {
         System.out.println("Select time of day:1:Morning, 2: Afternoon. 3:Evening ");
@@ -190,8 +204,8 @@ public class Main {
     /**
      * it displays exercises to user and takes input for whichever exercise they want to proceed with
      *
-     * @param scanner
-     * @return
+     * @param scanner object of student to take input from user
+     * @return the exercise number selected by the student
      */
     private static int displayAndChooseExercise(Scanner scanner) {
         Exercise[] values = Exercise.values();

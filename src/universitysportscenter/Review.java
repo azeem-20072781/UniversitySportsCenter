@@ -66,6 +66,10 @@ public class Review {
         this.reviewRating = reviewRating;
     }
 
+    /**
+     * it returns a formatted string for this class
+     * @return  formatted string
+     */
     @Override
     public String toString() {
         return "[review='" + review + '\'' +

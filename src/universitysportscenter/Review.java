@@ -65,4 +65,11 @@ public class Review {
     public void setReviewRating(int reviewRating) {
         this.reviewRating = reviewRating;
     }
+
+    @Override
+    public String toString() {
+        return "[review='" + review + '\'' +
+                ", reviewRating=" + reviewRating + "]";
+
+    }
 }

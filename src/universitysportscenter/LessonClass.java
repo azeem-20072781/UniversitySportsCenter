@@ -86,4 +86,13 @@ public class LessonClass {
     public Review getReview() {
         return review;
     }
+
+    /**
+     * Sets review.
+     *
+     * @param review the review
+     */
+    public void setReview(Review review) {
+        this.review = review;
+    }
 }

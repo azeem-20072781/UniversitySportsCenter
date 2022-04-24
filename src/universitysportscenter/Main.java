@@ -21,7 +21,7 @@ public class Main {
 
         int choice;
         do {
-            System.out.println("Enter your choice: \n1:Schedule\n2:Check Timetable and Choose Lesson\n3:Show Students0:Exit");
+            System.out.println("Enter your choice: \n1:Schedule\n2:Check Timetable and Choose Lesson\n3:Show Students\n4:Review Your Lesson\n0:Exit");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1 -> {
@@ -30,7 +30,6 @@ public class Main {
                     if (choice == 1) {
                         System.out.print("Enter Day Name(Saturday/Sunday): ");
                         String dayName = scanner.nextLine();
-                        //TODO show time table by day name
                         for (LessonClass lessonClass : lessonClassesList) {
                             if (lessonClass.getDay().equalsIgnoreCase(dayName)) {
                                 System.out.println("Time: " + lessonClass.getTimeOfDay() + " Space Left: " + (4 - lessonClass.getNoOfStudents()) + " ");
@@ -39,11 +38,15 @@ public class Main {
 
                     } else if (choice == 2) {
                         int exerciseNumber = displayAndChooseExercise(scanner);
-                        //TODO show time table by exercise
+                        Exercise exercise = getExercise(exerciseNumber);
+                        for (LessonClass lessonClass : lessonClassesList) {
+                            if (lessonClass.getStudent().getSelectedExercise().contains(exercise)) {
+                                System.out.println("Time: " + lessonClass.getTimeOfDay() + " Space Left: " + (4 - lessonClass.getNoOfStudents()) + " ");
+                            }
+                        }
                     } else System.out.println("Invalid choice");
                 }
                 case 2 -> {
-                    //TODO choose and store exercise
                     int exerciseNumber = displayAndChooseExercise(scanner);
                     System.out.print("Enter Student Name: ");
                     String studentName = scanner.nextLine();
@@ -54,29 +57,56 @@ public class Main {
                     ArrayList<Exercise> exerciseArrayList = new ArrayList<>();
                     exerciseArrayList.add(exercise);
                     Student student = new Student(studentName, exerciseArrayList);
-                    LessonClass lessonClass = new LessonClass(student, "day", 0, timeOfDay, null);
+                    LessonClass lessonClass = new LessonClass(student, "day", 1, timeOfDay, null);
                     lessonClassesList.add(lessonClass);
                     System.out.println("Added Success Fully");
                 }
                 case 3 -> {
                     for (LessonClass lessonClass : lessonClassesList) {
-                        System.out.println(lessonClass.day + " " + lessonClass.timeOfDay.getTime() + " " + lessonClass.noOfStudents + " " + lessonClass.student);
+                        System.out.println(lessonClass.day + " , " + lessonClass.timeOfDay.getTime() + " , Students = " + lessonClass.noOfStudents +
+                                " , " + lessonClass.student + " , " +
+                                lessonClass.getReview());
                     }
                 }
-            }
+                case 4 -> {
+                    System.out.print("Enter Your Name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Enter Day: ");
+                    String day = scanner.nextLine();
+                    System.out.print("Choose Exercise: ");
+                    int exerciseNumber = displayAndChooseExercise(scanner);
+                    Exercise exercise = getExercise(exerciseNumber);
 
-            System.out.println("Do you want to perform another action(1/0)?");
-            choice = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Enter your review: ");
+                    String reviewString = scanner.nextLine();
+                    System.out.print("Choose your rating from(1: Very dissatisfied, 2: Dissatisfied, 3: Ok, 4: Satisfied, 5:" +
+                            "Very Satisfied): ");
+                    int reviewRating = Integer.parseInt(scanner.nextLine());
+                    Review review = new Review(reviewString, reviewRating);
+                    for (LessonClass lesson : lessonClassesList) {
+                        if (lesson.getStudent().getName().equalsIgnoreCase(name) && lesson.getDay().equalsIgnoreCase(day) && lesson.getStudent().getSelectedExercise().contains(exercise)) {
+                            lesson.setReview(review);
+                            System.out.println("Review Added Successfully");
+
+                        }
+                    }
+
+                }
+            }
+            if (choice != 0) {
+                System.out.println("Do you want to perform another action(1/0)?");
+                choice = Integer.parseInt(scanner.nextLine());
+            }else System.out.println("Thank you for using this system");
         } while (choice == 1);
 
     }
 
     /**
      * it adds dummy data to application
+     *
      * @param lessonClassesList
      */
     private static void addStudentsData(ArrayList<LessonClass> lessonClassesList) {
-//Student student, String day, int noOfStudents, TimeOfDay timeOfDay, Review review
         for (int i = 0; i < 10; i++) {
 
             int time = getRandomNumber(3);
@@ -98,7 +128,7 @@ public class Main {
             selectedExercise.add(exercise);
 
             Student student = new Student("Student " + (i + 1), selectedExercise);
-            Review review = new Review("GASDOIGAS ASDGKJAFS SDAFK ", rating);
+            Review review = new Review("dummy review ", rating);
             LessonClass lessonClass = new LessonClass(student, dayName, 1, timeOfDay, review);
 
 
@@ -109,6 +139,7 @@ public class Main {
 
     /**
      * it generates random numbers
+     *
      * @param max
      * @return
      */
@@ -121,8 +152,9 @@ public class Main {
 
     /**
      * it takes exercise from user whichever he wants to select
+     *
      * @param exerciseNumber
-     * @return  Exercise
+     * @return Exercise
      */
     private static Exercise getExercise(int exerciseNumber) {
         Exercise exercise = null;
@@ -137,8 +169,9 @@ public class Main {
 
     /**
      * it takes the time of day from user for lesson
+     *
      * @param scanner
-     * @return  TimeOfDay
+     * @return TimeOfDay
      */
     private static TimeOfDay getTimeOfDay(Scanner scanner) {
         System.out.println("Select time of day:1:Morning, 2: Afternoon. 3:Evening ");
@@ -156,6 +189,7 @@ public class Main {
 
     /**
      * it displays exercises to user and takes input for whichever exercise they want to proceed with
+     *
      * @param scanner
      * @return
      */

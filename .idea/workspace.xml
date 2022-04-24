@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="added TimeOfDay.java and reformatted code">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UniversitySportsCentre.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/universitysportscenter/TimeOfDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Student.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="288PgvBUmLEYsh3zjRtUNGsjjTh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="universitysportscenter.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="universitysportscenter.Main" />
+      <module name="UniversitySportsCentre" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="universitysportscenter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.universitysportscenter.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="" />
+      <created>1650595356674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650595356674</updated>
+      <workItem from="1650595358335" duration="2705000" />
+      <workItem from="1650604461825" duration="703000" />
+      <workItem from="1650605174919" duration="1330000" />
+      <workItem from="1650612377630" duration="813000" />
+      <workItem from="1650639517803" duration="599000" />
+      <workItem from="1650732138718" duration="2403000" />
+      <workItem from="1650765281080" duration="418000" />
+    </task>
+    <task id="LOCAL-00001" summary="started project and added Main.java, LessonClass.java, Exercise.java, Student.java and Review.java">
+      <created>1650598043244</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650598043244</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="started project and added Main.java, LessonClass.java, Exercise.java, Student.java and Review.java" />
+    <MESSAGE value="added TimeOfDay.java and reformatted code" />
+    <option name="LAST_COMMIT_MESSAGE" value="added TimeOfDay.java and reformatted code" />
+  </component>
+</project>

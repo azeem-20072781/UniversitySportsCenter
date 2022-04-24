@@ -1,6 +1,6 @@
 package universitysportscenter;
 
-public enum Exercise {
+public enum Exercise  {
     YOGA("Yoga", 100), ZUMBA("Zumba", 110),
 
     AQUACISE("Aquacise", 120), BOX_FIT("Box Fit", 130),

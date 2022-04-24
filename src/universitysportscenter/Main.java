@@ -1,8 +1,6 @@
 package universitysportscenter;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * The type Main.
@@ -63,9 +61,7 @@ public class Main {
                 }
                 case 3 -> {
                     for (LessonClass lessonClass : lessonClassesList) {
-                        System.out.println(lessonClass.day + " , " + lessonClass.timeOfDay.getTime() + " , Students = " + lessonClass.noOfStudents +
-                                " , " + lessonClass.student + " , " +
-                                lessonClass.getReview());
+                        System.out.println(lessonClass.day + " , " + lessonClass.timeOfDay.getTime() + " , Students = " + lessonClass.noOfStudents + " , " + lessonClass.student + " , " + lessonClass.getReview());
                     }
                 }
                 case 4 -> {
@@ -79,8 +75,7 @@ public class Main {
 
                     System.out.print("Enter your review: ");
                     String reviewString = scanner.nextLine();
-                    System.out.print("Choose your rating from(1: Very dissatisfied, 2: Dissatisfied, 3: Ok, 4: Satisfied, 5:" +
-                            "Very Satisfied): ");
+                    System.out.print("Choose your rating from(1: Very dissatisfied, 2: Dissatisfied, 3: Ok, 4: Satisfied, 5:" + "Very Satisfied): ");
                     int reviewRating = Integer.parseInt(scanner.nextLine());
                     Review review = new Review(reviewString, reviewRating);
                     for (LessonClass lesson : lessonClassesList) {
@@ -96,12 +91,39 @@ public class Main {
                     //TODO print reports
                     System.out.println("Choose Report To Print: 1:Report 1\n2:Report 2");
                     int reportNumber = Integer.parseInt(scanner.nextLine());
-                   //a report containing the number of students per group exercise lesson on each day, along with the
+                    //a report containing the number of students per group exercise lesson on each day, along with the
+                    //average rating;
+                    int avg = 0, countSaturday = 0, countSunday = 0, saturdayRating = 0, sundayRating = 0;
+                    //a report containing the number of students per group exercise lesson on each day, along with the
                     //average rating;
                     if (reportNumber == 1) {
+
+                        TreeMap<String, Integer> map = new TreeMap<>();
+
+                        for (LessonClass lessonClass : lessonClassesList) {
+                            String exercise = lessonClass.getStudent().getSelectedExercise().get(0).getName();
+                            String key = ("Saturday," + exercise + "," + lessonClass.getTimeOfDay().getTime());
+                            map.put(key, lessonClass.getNoOfStudents());
+                            countSaturday += 1;
+                            saturdayRating += lessonClass.getReview().getReviewRating();
+                        }
+                        for (LessonClass lessonClass : lessonClassesList) {
+                            String exercise = lessonClass.getStudent().getSelectedExercise().get(0).getName();
+                            String key = ("Sunday," + exercise + "," + lessonClass.getTimeOfDay().getTime());
+                            countSunday += 1;
+                            sundayRating += lessonClass.getReview().getReviewRating();
+                            map.put(key, lessonClass.getNoOfStudents());
+                        }
+
+                        for (String key : map.keySet()) {
+                            if (key.contains("Saturday"))
+                                System.out.println(key + " " + map.get(key) + " - Average Rating: " + saturdayRating / countSaturday);
+                            if (key.contains("Sunday"))
+                                System.out.println(key + " " + map.get(key) + " - Average Rating: " + sundayRating / countSunday);
+                        }
                     }
-                    //a report containing the group exercise which has generated the highest income, counting all the
-                    //same exercise lessons together.
+                    //a report containing the number of students per group exercise lesson on each day, along with the
+                    //average rating;
                     else if (reportNumber == 2) {
 
                     }
@@ -118,7 +140,7 @@ public class Main {
     /**
      * it adds dummy data to application
      *
-     * @param lessonClassesList  list containing data of all students
+     * @param lessonClassesList list containing data of all students
      */
     private static void addStudentsData(ArrayList<LessonClass> lessonClassesList) {
         for (int i = 0; i < 10; i++) {
@@ -154,14 +176,12 @@ public class Main {
     /**
      * it generates random numbers
      *
-     * @param max  limit upto which the random number will be generated
-     * @return  a random number
+     * @param max limit upto which the random number will be generated
+     * @return a random number
      */
     private static int getRandomNumber(int max) {
         Random random = new Random();
-        return random.ints(1, max)
-                .findFirst()
-                .getAsInt();
+        return random.ints(1, max).findFirst().getAsInt();
     }
 
     /**

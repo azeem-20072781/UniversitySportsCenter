@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="added TimeOfDay.java and reformatted code. Extracted methods to take input for exercise and time of day">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/TimeOfDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/TimeOfDay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

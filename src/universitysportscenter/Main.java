@@ -71,6 +71,10 @@ public class Main {
 
     }
 
+    /**
+     * it adds dummy data to application
+     * @param lessonClassesList
+     */
     private static void addStudentsData(ArrayList<LessonClass> lessonClassesList) {
 //Student student, String day, int noOfStudents, TimeOfDay timeOfDay, Review review
         for (int i = 0; i < 10; i++) {
@@ -103,6 +107,11 @@ public class Main {
         }
     }
 
+    /**
+     * it generates random numbers
+     * @param max
+     * @return
+     */
     private static int getRandomNumber(int max) {
         Random random = new Random();
         return random.ints(1, max)
@@ -110,6 +119,11 @@ public class Main {
                 .getAsInt();
     }
 
+    /**
+     * it takes exercise from user whichever he wants to select
+     * @param exerciseNumber
+     * @return  Exercise
+     */
     private static Exercise getExercise(int exerciseNumber) {
         Exercise exercise = null;
         if (exerciseNumber == 1) exercise = Exercise.YOGA;
@@ -121,6 +135,11 @@ public class Main {
         return exercise;
     }
 
+    /**
+     * it takes the time of day from user for lesson
+     * @param scanner
+     * @return  TimeOfDay
+     */
     private static TimeOfDay getTimeOfDay(Scanner scanner) {
         System.out.println("Select time of day:1:Morning, 2: Afternoon. 3:Evening ");
         int time = Integer.parseInt(scanner.nextLine());
@@ -135,6 +154,11 @@ public class Main {
         return timeOfDay;
     }
 
+    /**
+     * it displays exercises to user and takes input for whichever exercise they want to proceed with
+     * @param scanner
+     * @return
+     */
     private static int displayAndChooseExercise(Scanner scanner) {
         Exercise[] values = Exercise.values();
         for (int i = 0; i < values.length; i++) {

@@ -51,6 +51,10 @@ public class Student {
         return selectedExercise;
     }
 
+    /**
+     * it is used to return a formatted string of the data of this class
+     * @return a formatted string
+     */
     @Override
     public String toString() {
         return "Student name='" + getName() + '\'' + ", selectedExercise= " + Arrays.toString(getSelectedExercise().toArray());

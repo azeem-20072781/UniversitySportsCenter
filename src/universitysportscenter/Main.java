@@ -122,8 +122,8 @@ public class Main {
                                 System.out.println(key + " " + map.get(key) + " - Average Rating: " + sundayRating / countSunday);
                         }
                     }
-                    //a report containing the number of students per group exercise lesson on each day, along with the
-                    //average rating;
+                    //a report containing the group exercise which has generated the highest income, counting all the
+                    //same exercise lessons together.
                     else if (reportNumber == 2) {
 
                     }

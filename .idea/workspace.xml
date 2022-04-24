@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="UniversitySportsCentre:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="updated README.md">
+    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="added Test cases">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/UniversitySportsCentre_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/universitysportscenter/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversitySportsCentre.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UniversitySportsCentre.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +24,7 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -33,13 +42,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "/home/jamshaid/IdeaProjects/UniversitySportsCentre/src/universitysportscenter",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
@@ -48,24 +67,101 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/universitysportscenter" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="universitysportscenter" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="universitysportscenter.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="universitysportscenter.Main" />
+  <component name="RunManager" selected="JUnit.MainTest.testDisplayAndChooseExercise">
+    <configuration name="MainTest.testAddStudentsData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UniversitySportsCentre" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="universitysportscenter.*" />
+          <option name="PATTERN" value="test.universitysportscenter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="test.universitysportscenter" />
+      <option name="MAIN_CLASS_NAME" value="test.universitysportscenter.MainTest" />
+      <option name="METHOD_NAME" value="testAddStudentsData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testDisplayAndChooseExercise" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UniversitySportsCentre" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.universitysportscenter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.universitysportscenter" />
+      <option name="MAIN_CLASS_NAME" value="test.universitysportscenter.MainTest" />
+      <option name="METHOD_NAME" value="testDisplayAndChooseExercise" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testGetExercise" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UniversitySportsCentre" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.universitysportscenter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.universitysportscenter" />
+      <option name="MAIN_CLASS_NAME" value="test.universitysportscenter.MainTest" />
+      <option name="METHOD_NAME" value="testGetExercise" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testGetRandomNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UniversitySportsCentre" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.universitysportscenter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.universitysportscenter" />
+      <option name="MAIN_CLASS_NAME" value="test.universitysportscenter.MainTest" />
+      <option name="METHOD_NAME" value="testGetRandomNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testGetTimeOfDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UniversitySportsCentre" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.universitysportscenter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.universitysportscenter" />
+      <option name="MAIN_CLASS_NAME" value="test.universitysportscenter.MainTest" />
+      <option name="METHOD_NAME" value="testGetTimeOfDay" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.universitysportscenter.Main" />
+        <item itemvalue="JUnit.MainTest.testDisplayAndChooseExercise" />
+        <item itemvalue="JUnit.MainTest.testGetTimeOfDay" />
+        <item itemvalue="JUnit.MainTest.testGetExercise" />
+        <item itemvalue="JUnit.MainTest.testGetRandomNumber" />
+        <item itemvalue="JUnit.MainTest.testAddStudentsData" />
       </list>
     </recent_temporary>
   </component>
@@ -89,7 +185,7 @@
       <workItem from="1650819039822" duration="3671000" />
       <workItem from="1650822723123" duration="222000" />
       <workItem from="1650822956326" duration="95000" />
-      <workItem from="1650823077923" duration="3734000" />
+      <workItem from="1650823077923" duration="5168000" />
     </task>
     <task id="LOCAL-00001" summary="started project and added Main.java, LessonClass.java, Exercise.java, Student.java and Review.java">
       <created>1650598043244</created>
@@ -140,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650825744419</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added Report 2 and refactored code. Also added some comments">
+      <created>1650826827424</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650826827424</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +270,8 @@
     <MESSAGE value="added missing docs and descriptions. Added reports to print" />
     <MESSAGE value="updated report 1" />
     <MESSAGE value="updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated README.md" />
+    <MESSAGE value="added Report 2 and refactored code. Also added some comments" />
+    <MESSAGE value="added Test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Test cases" />
   </component>
 </project>

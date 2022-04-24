@@ -42,6 +42,9 @@ public class LessonClass {
         this.review = review;
     }
 
+    public LessonClass() {
+    }
+
     /**
      * Gets student.
      *

@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="added TimeOfDay.java and reformatted code">
+    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="added TimeOfDay.java and reformatted code. Extracted methods to take input for exercise and time of day">
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UniversitySportsCentre.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/universitysportscenter/TimeOfDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Exercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/LessonClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/universitysportscenter/TimeOfDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/TimeOfDay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +36,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="universitysportscenter.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="universitysportscenter.Main" />
@@ -86,7 +82,9 @@
       <workItem from="1650612377630" duration="813000" />
       <workItem from="1650639517803" duration="599000" />
       <workItem from="1650732138718" duration="2403000" />
-      <workItem from="1650765281080" duration="418000" />
+      <workItem from="1650765281080" duration="5015000" />
+      <workItem from="1650803341369" duration="846000" />
+      <workItem from="1650814853914" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="started project and added Main.java, LessonClass.java, Exercise.java, Student.java and Review.java">
       <created>1650598043244</created>
@@ -95,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650598043244</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added TimeOfDay.java and reformatted code. Extracted methods to take input for exercise and time of day">
+      <created>1650765967860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650765967860</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started project and added Main.java, LessonClass.java, Exercise.java, Student.java and Review.java" />
     <MESSAGE value="added TimeOfDay.java and reformatted code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added TimeOfDay.java and reformatted code" />
+    <MESSAGE value="added TimeOfDay.java and reformatted code. Extracted methods to take input for exercise and time of day" />
+    <option name="LAST_COMMIT_MESSAGE" value="added TimeOfDay.java and reformatted code. Extracted methods to take input for exercise and time of day" />
   </component>
 </project>

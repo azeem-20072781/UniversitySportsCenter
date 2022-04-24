@@ -1,15 +1,19 @@
 package universitysportscenter;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         ArrayList<LessonClass> lessonClassesList = new ArrayList<>();
+        addStudentsData(lessonClassesList);
+
         int choice;
         do {
-            System.out.println("Enter your choice: \n1:Schedule\n2:Choose Exercise\n0:Exit");
+            System.out.println("Enter your choice: \n1:Schedule\n2:Check Timetable and Choose Lesson\n3:Show Students0:Exit");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1 -> {
@@ -19,6 +23,11 @@ public class Main {
                         System.out.print("Enter Day Name(Saturday/Sunday): ");
                         String dayName = scanner.nextLine();
                         //TODO show time table by day name
+                        for (LessonClass lessonClass : lessonClassesList) {
+                            if (lessonClass.getDay().equalsIgnoreCase(dayName)) {
+                                System.out.println("Time: " + lessonClass.getTimeOfDay() + " Space Left: " + (4 - lessonClass.getNoOfStudents()) + " ");
+                            }
+                        }
 
                     } else if (choice == 2) {
                         int exerciseNumber = displayAndChooseExercise(scanner);
@@ -43,7 +52,7 @@ public class Main {
                 }
                 case 3 -> {
                     for (LessonClass lessonClass : lessonClassesList) {
-                        System.out.println(lessonClass.day+" "+lessonClass.timeOfDay.getTime()+" "+lessonClass.noOfStudents+" "+lessonClass.student);
+                        System.out.println(lessonClass.day + " " + lessonClass.timeOfDay.getTime() + " " + lessonClass.noOfStudents + " " + lessonClass.student);
                     }
                 }
             }
@@ -52,6 +61,45 @@ public class Main {
             choice = Integer.parseInt(scanner.nextLine());
         } while (choice == 1);
 
+    }
+
+    private static void addStudentsData(ArrayList<LessonClass> lessonClassesList) {
+//Student student, String day, int noOfStudents, TimeOfDay timeOfDay, Review review
+        for (int i = 0; i < 10; i++) {
+
+            int time = getRandomNumber(3);
+            int rating = getRandomNumber(5);
+            int day = getRandomNumber(2);
+            int exerciseNumber = getRandomNumber(5);
+            Exercise exercise = getExercise(exerciseNumber);
+            String dayName = null;
+            if (day == 1) dayName = "Saturday";
+            else if (day == 2) dayName = "Sunday";
+
+
+            TimeOfDay timeOfDay = null;
+            if (time == 1) timeOfDay = TimeOfDay.MORNING;
+            else if (time == 2) timeOfDay = TimeOfDay.AFTERNOON;
+            else if (time == 3) timeOfDay = TimeOfDay.EVENING;
+
+            ArrayList<Exercise> selectedExercise = new ArrayList<>();
+            selectedExercise.add(exercise);
+
+            Student student = new Student("Student " + (i + 1), selectedExercise);
+            Review review = new Review("GASDOIGAS ASDGKJAFS SDAFK ", rating);
+            LessonClass lessonClass = new LessonClass(student, dayName, 1, timeOfDay, review);
+
+
+            lessonClassesList.add(lessonClass);
+
+        }
+    }
+
+    private static int getRandomNumber(int max) {
+        Random random = new Random();
+        return random.ints(1, max)
+                .findFirst()
+                .getAsInt();
     }
 
     private static Exercise getExercise(int exerciseNumber) {

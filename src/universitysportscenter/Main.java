@@ -93,12 +93,13 @@ public class Main {
                     int reportNumber = Integer.parseInt(scanner.nextLine());
                     //a report containing the number of students per group exercise lesson on each day, along with the
                     //average rating;
-                    int avg = 0, countSaturday = 0, countSunday = 0, saturdayRating = 0, sundayRating = 0;
+                    int  countSaturday = 0, countSunday = 0, saturdayRating = 0, sundayRating = 0;
                     //a report containing the number of students per group exercise lesson on each day, along with the
                     //average rating;
                     if (reportNumber == 1) {
 
                         TreeMap<String, Integer> map = new TreeMap<>();
+                        //getting rating for Saturday along with number of studnets
 
                         for (LessonClass lessonClass : lessonClassesList) {
                             String exercise = lessonClass.getStudent().getSelectedExercise().get(0).getName();
@@ -107,6 +108,7 @@ public class Main {
                             countSaturday += 1;
                             saturdayRating += lessonClass.getReview().getReviewRating();
                         }
+                        //getting rating for Sunday along with number of studnets
                         for (LessonClass lessonClass : lessonClassesList) {
                             String exercise = lessonClass.getStudent().getSelectedExercise().get(0).getName();
                             String key = ("Sunday," + exercise + "," + lessonClass.getTimeOfDay().getTime());
@@ -114,7 +116,7 @@ public class Main {
                             sundayRating += lessonClass.getReview().getReviewRating();
                             map.put(key, lessonClass.getNoOfStudents());
                         }
-
+                            //calculating average for separate days
                         for (String key : map.keySet()) {
                             if (key.contains("Saturday"))
                                 System.out.println(key + " " + map.get(key) + " - Average Rating: " + saturdayRating / countSaturday);
@@ -125,7 +127,25 @@ public class Main {
                     //a report containing the group exercise which has generated the highest income, counting all the
                     //same exercise lessons together.
                     else if (reportNumber == 2) {
+                        //separating exercise and its cose with number of students enrolled
+                        TreeMap<String, Integer> costMap = new TreeMap<>();
+                        for (LessonClass lessonClass : lessonClassesList) {
+                            Exercise exercise = lessonClass.getStudent().getSelectedExercise().get(0);
+                            String exerciseName = exercise.getName();
+                            costMap.put(exerciseName + "," + lessonClass.getNoOfStudents(), exercise.getPrice());
+                        }
+                        //calculating total price
+                        for (String key : costMap.keySet()) {
+                            String[] keyParsed = key.split(",");
+                            int noOfStudents = Integer.parseInt(keyParsed[1]);
+                            int price = costMap.get(key);
+                            int totalPrice = noOfStudents * price;
 
+                            costMap.put(key, totalPrice);
+                        }
+                        //getting key with max price and printing it along price
+                        String key = Collections.max(costMap.entrySet(), Comparator.comparingInt(Map.Entry::getValue)).getKey();
+                        System.out.println(key.substring(0, key.indexOf(",")) + " , Price: " + costMap.get(key));
                     }
                 }
             }

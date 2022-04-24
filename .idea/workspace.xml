@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="updated report 1">
+    <list default="true" id="5d9d4de0-5142-446c-bfe5-a72e917525d7" name="Changes" comment="updated README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/universitysportscenter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/universitysportscenter/Main.java" afterDir="false" />
     </list>
@@ -88,7 +89,7 @@
       <workItem from="1650819039822" duration="3671000" />
       <workItem from="1650822723123" duration="222000" />
       <workItem from="1650822956326" duration="95000" />
-      <workItem from="1650823077923" duration="2610000" />
+      <workItem from="1650823077923" duration="3734000" />
     </task>
     <task id="LOCAL-00001" summary="started project and added Main.java, LessonClass.java, Exercise.java, Student.java and Review.java">
       <created>1650598043244</created>
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650825561818</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated README.md">
+      <created>1650825744419</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650825744419</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +166,7 @@
     <MESSAGE value="added missing docs. Added reports to print" />
     <MESSAGE value="added missing docs and descriptions. Added reports to print" />
     <MESSAGE value="updated report 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated report 1" />
+    <MESSAGE value="updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README.md" />
   </component>
 </project>
